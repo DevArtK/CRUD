@@ -1,0 +1,34 @@
+{
+  "name": "crud",
+  "version": "0.1.0",
+  "description": "Connect Resources and Unite Developers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlphaOmegaAK/CRUD.git"
+  },
+  "author": "Alpha0mega (Art)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlphaOmegaAK/CRUD/issues"
+  },
+  "homepage": "https://github.com/AlphaOmegaAK/CRUD#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
+    "moment": "^2.27.0",
+    "mongoose": "^5.9.25",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "path": "^0.12.7"
+  }
+}
