@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <%- include('./partials/navbar') %>
+    <!-- Main -->
+    <main>
+        <div class="container-fluid text-center">
+            <i class="userlogin fas fa-user-circle"></i>
+            <h3>Create Profile</h3>
+            <div class="bodyText row text-center justify-content-center">
+                <form action="/network" method="POST">
+                    <div class="form-row">
+                        <div class="col m-2">
+                            <input type="text" class="form-control" name="name" placeholder="name" required/>
+                        </div>
+                        <div class="col m-2">
+                            <input type="text" class="form-control" name="location" placeholder="location" required/> 
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col m-2">
+                            <input type="email" class="form-control" name="email" placeholder="email" required/>
+                        </div>
+                        <div class="col m-2">
+                            <input type="password" class="form-control" name="password" placeholder="password" required/>
+                        </div>
+                    </div>
+                    <div class="m-2">
+                        <textarea type="text" class="form-control" name="interests" placeholder="what are you passionate about?" required></textarea>
+                    </div>
+                    <div class="m-2">
+                        <select class="form-control" name="profession">
+                            <option placeholder="select one" value="Select">Please select your profession</option>
+                            <option value="Front-End Developer">Front-End Developer</option>
+                            <option value="Back-End Developer">Back-End Developer</option>
+                            <option value="Full-Stack Developer">Full-Stack</option>
+                            <option value="Full-Stack Developer">Other</option>
+                        </select>
+                    </div>
+                    <div class="btn-toolbar justify-content-center">
+                        <button class="button btn m-2" type="submit"><i class="fab fa-google"></i> Sign in with Google</button>
+                        <button class="button btn m-2" type="submit">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+    <%- include('./partials/footer') %>
+    <%- include('./partials/plugins') %>
+</body>
+</html>

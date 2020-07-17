@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <%- include('../partials/navbar') %>
+<!-- Main -->
+    <main>
+
+        <div>
+            <div class="container mt-5 mb-3">
+                <h1 class="network">
+                    Meet <%= user.name %>!
+                </h1>  
+            </div>
+        </div>
+
+
+        <div class="profile container mb-5">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-3 text-center">
+                        <img class="mt-4 rounded-circle" src="/photos/code.jpg" alt="image" width="180" height="180">
+                    </div>
+                    <div class="col-sm-12 col-lg-9 text-center">
+                        <h2 class="mt-4 text-center"><%= user.profession %></h2>
+                        <p class="mt-4 text-center">Lives in <%= user.location %></p>
+                        <p class="text-center">Likes: <%= user.interests %></p>
+                        <p class="text-center"><a href="mailto:<%= user.email %>" class="link">Send them an email to connect!</a></p>
+                    </div>
+                </div>
+        </div>
+
+</main>
+
+<%- include('../partials/footer') %>
+<%- include('../partials/plugins') %>
+</body>
+</html>

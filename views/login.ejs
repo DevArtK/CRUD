@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <%- include('./partials/navbar') %>
+    <!-- Main -->
+    <main>
+        <div class="container-fluid text-center">
+                <i class="userlogin fas fa-user-circle"></i>
+                <h3 class="m-3">Login</h3>
+                <div class="bodyText row justify-content-center text-center">
+                    <form action="/network" method="GET">
+                        <div class="row mb-2">
+                            <input type="email" class="form-control" name="email" placeholder="email"/>
+                        </div>
+                        <div class="row mb-2">
+                            <input type="password" class="form-control" name="password" placeholder="password"/>
+                        </div>
+                        <div class="btn-toolbar justify-content-center">
+                            <a href="auth/google"><button class="button btn mb-2 mt-2 mr-2"><i class="fab fa-google"></i> Sign in with Google</button></a>
+                            <button class="button btn mb-2 mt-2" type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <%- include('./partials/footer') %>
+    <%- include('./partials/plugins') %>
+</body>
+</html>

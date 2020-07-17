@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <%- include('../partials/navbar') %>
+<!-- Main -->
+    <main>
+
+        <!-- Resource Message -->
+        <div class="container-fluid" id="info">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <h2 class="p-4">Resources</h2>
+                </div>
+                <div class="col-md-9">
+                    <p class="p-4">
+                        See below for our favorite resources for all things <span class="highlight">software engineering</span>.
+                    </p> 
+                </div>
+            </div>
+        </div>
+
+<!-- Static Resources -->
+        <div class="card-columns p-4">
+            <div class="card p-3">
+              <blockquote class="blockquote mb-0 card-body">
+                <p>“Creativity is the goal. Coding is just to allow that. Creativity is in the front seat; technology is in the backseat. It is sort of the blend with both of these that you can do such powerful things now.”</p>
+                <p class="card-text mr-auto"><small class="text-muted">-Tim Cook</small></p>
+              </blockquote>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="photos/inspiration.jpg" alt="inspiration">
+                <div class="card-body">
+                  <h5 class="card-title bold">How To Stay Motivated as a Developer</h5>
+                  <p class="card-text">"Motivation: Wanting to do it more than you want to sleep.<br>
+                    Discipline: Doing it, even if you’re sleepy.<br>
+                    Habit: It’s just what you do, every day."</p>
+                    <p class="card-text"><a class="link" href="https://medium.com/better-programming/how-to-stay-motivated-as-a-developer-810ca49ae287"><small>medium.com</small></a></p>
+                </div>
+              </div>
+            <div class="card">
+              <img class="card-img-top" src="photos/computer.jpg" alt="computer">
+              <div class="card-body">
+                <h5 class="card-title bold">CSS-TRICKS</h5>
+                <p class="card-text">CSS is hard and having good resources can really give you a leg up. Check this site out for all the best tips and tricks!</p>
+                <p class="card-text"><a class="link" href="https://css-tricks.com/"><small>css-tricks.com</small></a></p>
+              </div>
+            </div>
+            <div class="card">
+              <blockquote class="blockquote mb-0 card-body">
+                <p>Checkout <span class="bold">General Assembly</span>! They taught us how to build this website!</p>
+                <p class="card-text"><a class="link" href="https://generalassemb.ly/"><small>generalassemb.ly.com</small></a></p>
+              </blockquote>
+            </div>
+            <div class="card text-center p-3">
+              <blockquote class="blockquote mb-0">
+                <p>“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”
+                </p>
+                <p class="card-text mr-auto"><small class="text-muted">― Martin Fowler</small></p>
+              </blockquote>
+            </div>
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title bold">MDN</h5>
+                <p class="card-text">MDN is our favorite resource for documentation. 10/10 recommend.</p>
+                <p class="card-text"><a class="link" href="https://developer.mozilla.org/"><small>MDN web docs</small></a></p>
+              </div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="photos/code2.jpg" alt="code">
+              </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title bold">JavaScript</h5>
+                <p class="card-text">"JavaScript.com is a resource built by the Pluralsight team for the JavaScript community."</p>
+                <p class="card-text"><a class="link" href="https://www.javascript.com"><small>javascript.com</small></a></p> 
+              </div>
+            </div>
+          </div>
+
+<!-- User added Resources -->
+        <div class="container-fluid p-5" id="info">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <h2 class="p-4">
+                        Check out resources added by our network members just like you!
+                    </h2>
+                </div>
+                <div class="col-md-6">
+                    <% resource.forEach(resource => { %>
+                    <div class="share card p-3 m-4">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="/resources/<%= resource._id %>" class="link"><%= resource.name %></a></h4>
+                            <p class="card-text"><%= resource.link %></p>
+                            <!-- <p class="card-text"><small class="text-muted">Click for more details</small></p> -->
+                        </div>
+                    </div>
+                    <% }) %>    
+                </div>
+                <div class="col-md-3 text-center d-flex align-items-center justify-content-center">
+                    <div>
+                        <h4 class="p-4">
+                            Any resources you'd like to <a href="/resources/new" class="link">share?</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </main>
+
+<%- include('../partials/footer') %>
+<%- include('../partials/plugins') %>
+</body>
+</html>

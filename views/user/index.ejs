@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <%- include('../partials/navbar') %>
+<!-- Main -->
+    <main>
+        <div>
+            <div class="container mt-5 mb-3">
+                <h1 class="network">
+                    Meet your network!
+                </h1>  
+            </div>
+        </div>
+
+        <% user.forEach(user => { %>
+            <% const photos = ['cat1.jpg', 'cat2.jpg', 'cat3.jpg', 'cat4.jpg', 'cat5.jpg', 'cat6.jpg', 'cat7.jpg', 'animal1.jpg', 'animal2.jpg', 'animal3.jpg', 'animal4.jpg', 'animal5.jpg', 'animal6.jpg', 'animal7.jpg',]; %>
+            <% let photo = '' %>
+            <% function randomphoto() { %>
+                <% photo = photos[Math.floor(Math.random() * photos.length)]; %>
+                <% console.log(photo) %>
+            <% } %>
+            <% randomphoto(); %>
+        <div class="networkUser container mb-5"> 
+            <div class="users row">
+                <div class="col-sm-12 col-lg-4 text-center">
+                        <img class="mt-4 rounded-circle" src="/photos/animals/<%= photo %>" alt="image" width="180" height="180">
+                </div>
+                <div class="col-sm-12 col-lg-5 text-center">
+                    <h2 class="mt-4 text-center"><%= user.name %></h2>
+                    <p class="mt-4 text-center"><%= user.profession %></p>
+                    <p class="text-center"><a class="button btn" href="network/<%= user._id %>" role="button">View profile »</a></p>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+
+</main>
+
+<%- include('../partials/footer') %>
+<%- include('../partials/plugins') %>
+</body>
+</html>

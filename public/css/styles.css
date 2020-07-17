@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:wght@400;500;700&display=swap');
+
+/* Global */
+:root {
+    --orange: #FD521F;
+    --background: #F4F7F6;
+    --lightgrey: #EEEEEE; 
+    --dark: #2D2D2D;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    color: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+
+p {
+    line-height: 30px;
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+.button {
+    background-color: var(--lightgrey);
+}
+
+.button:hover {
+    background-color: var(--dark);
+    color: var(--background);
+}
+
+.buttonTwo {
+    background-color: var(--orange);
+    color: var(--background);
+}
+
+.buttonTwo:hover {
+    background-color: var(--background);
+    color: var(--orange);
+}
+
+.highlight {
+    color: var(--orange);
+}
+
+.link {
+    color: var(--orange);
+}
+
+.link:hover {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.grey {
+    color: var(--lightgrey);
+}
+
+.bold {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+
+.justify {
+    font-size: 1.5rem;
+}
+/* NAV */
+nav.bg-light {
+    background-color: var(--background) !important;
+    opacity: 0.9;
+}
+
+.navbar a {
+    color: var(--orange) !important;
+}
+
+.navbar a:hover {
+    color: var(--dark) !important;
+}
+
+/* Homepage / some used globally */
+.welcome {
+    padding: 6rem 2rem;
+    color: var(--orange);
+}
+
+.info {
+    background-color:var(--lightgrey);
+    padding: 6rem 2rem;
+}
+
+#info {
+    background-color:var(--lightgrey);
+    padding: 6rem 2rem;
+}
+
+/* User Specific */
+.user {
+    background-color: var(--orange);
+    border: outset;
+    border-radius: 2rem;
+    border-color: var(--lightgrey);
+}
+
+.signup {
+    background-color: var(--orange);
+    border-radius: 1rem;
+    padding: 4rem;
+}
+
+.loginpage {
+    padding: 4rem;
+    background-color: var(--orange);
+    border-radius: 1rem;
+}
+
+.greybackground {
+    background-color: var(--lightgrey);
+    border-radius: 1rem;
+}
+
+#userlogin {
+    font-size: 10rem;
+    color: var(--lightgrey);
+}
+
+.userlogin {
+    font-size: 10rem;
+    color: var(--lightgrey);
+    margin-top: 4rem;
+}
+
+.network {
+    color: var(--orange);
+}
+
+.networkUser {
+    border-bottom: var(--orange) dotted 2px;
+    border-top: var(--orange) dotted 2px;
+}
+
+.profile {
+    padding: 2rem 7rem;
+    border-bottom: var(--orange) dotted 2px;
+    border-top: var(--orange) dotted 2px;
+}
+
+.users {
+    margin: 4rem;
+}
+
+.userProfile {
+    background-color:var(--lightgrey);
+}
+
+/* Resources */
+.share {
+    background-color: var(--background);
+}
+
+#resourceBtn {
+    color: var(--orange);
+}
+
+#resourceBtn:hover {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.newResource {
+    color: var(--orange);
+}
+
+/* FOOTER */
+#footer a {
+    color: var(--orange);
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: var(--dark);
+}
+
+#footer {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
